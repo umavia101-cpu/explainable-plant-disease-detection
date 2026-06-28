@@ -1,7 +1,14 @@
-tensorflow
-numpy
-pandas
-matplotlib
-scikit-learn
-streamlit
-opencv-python
+# ML / training environment — use Python 3.11 or 3.12 (TensorFlow has no 3.14 wheels).
+# Create the venv with: python3.12 -m venv .venv
+
+tensorflow==2.18.0
+tensorflow-metal==1.2.0      # Apple Silicon (M-series) GPU acceleration via Metal
+tensorflow-datasets==4.9.7   # provides the built-in PlantVillage dataset (plant_village)
+tensorflow-metadata==1.16.1  # pinned < 1.17 so it stays on protobuf 5.x (TF 2.18 needs protobuf < 6)
+importlib_resources==7.1.0   # required by tensorflow-datasets at runtime
+numpy==2.0.2                 # compatible with TF 2.18
+pandas==2.2.3
+matplotlib==3.9.2
+pillow==10.4.0
+scikit-learn==1.5.2
+streamlit==1.39.0
